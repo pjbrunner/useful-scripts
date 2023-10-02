@@ -7,7 +7,7 @@ import pandas as pd
 
 def get_args():
     parser = argparse.ArgumentParser(description='Organize raw finances, spits out two files: dime_expenses.csv and dime_income.csv')
-    parser.add_argument('file', help='CSV file containing income and expenses')
+    parser.add_argument('input_file', help='CSV file containing income and expenses')
     parser.add_argument('-s', '--start_date', required=False, help='Start date for data subset of data, if no end date is specified today\'s date will be used. Format must be (YYYY-MM-DD)')
     parser.add_argument('-e', '--end_date', required=False, help='End date for data subset of data, must also specify a start date is using this parameter. Format must be (YYYY-MM-DD)')
     return parser.parse_args()
@@ -60,7 +60,7 @@ def write_frames_to_file(expenses, income):
 def main():
     args = get_args()
 
-    df = create_data_frame(args.file)
+    df = create_data_frame(args.input_file)
 
     if args.start_date:
         is_date_format_good(args.start_date)
