@@ -21,9 +21,9 @@ positional arguments:
 options:
   -h, --help            show this help message and exit
   -s START_DATE, --start_date START_DATE
-                        Start date for data subset of data, if no end date is specified today's date will be used. Format must be (YYYY-MM-DD)
+                        Start date for subset of data, if no end date is specified today's date will be used. Format must be (YYYY-MM-DD)
   -e END_DATE, --end_date END_DATE
-                        End date for data subset of data, must also specify a start date is using this parameter. Format must be (YYYY-MM-DD)
+                        End date for subset of data, must also specify a start date is using this parameter. Format must be (YYYY-MM-DD)
 ```
 
 Python Version: 3.11.5
